@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<title>Page Layout</title>
+<link rel="stylesheet" href="../static/css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}" >
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<style>
+nav{background-color: #FFE4E1;}
+.footer {position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFE4E1;
+  color: white;
+  text-align: center;}
+</style>
+</head>
+<body>
+<nav class="navbar " >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gestion du parc Informatique</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a th:href="@{/user/index}">Home</a></li>
+      <li><a th:href="@{/admin/formProduit}"> 
+      <span class="glyphicon glyphicon-plus"></span>Ajouter</a></li>
+      <li><a href="#">Catégories</a></li>
+      <li><a href="#">Catalogue</a></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+    <li><a th:href="@{/login?logout}">Log Out</a></li>
+    
+    </ul>
+  </div>
+</nav>
+<section layout:fragment="content1"> </section>
+  <div class="footer"><p>ICF</p></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="UTF-8">
+<title>Produits</title>
+
+</head>
+<body>
+	<div layout:fragment="content1">
+		<div class="container">
+		<div class="col-md-6"> 
+			<div class="panel panel-primary">
+				<div class="panel-heading">Authentification</div>
+				<div class="panel-body">
+					<form th:action="@{/login}" method="post">
+					<div class="form-group">
+					<label class="control-label">Username</label>
+					<input class="form-control" type="text" name="username"> 
+					</div>
+						<div class="form-group">
+					<label class="control-label">Password:</label>
+					<input class="form-control" type="password" name="password"> 
+					</div>
+					<button class="btn btn-success" type="submit">login</button>
+					</form>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
